@@ -1,0 +1,23 @@
+
+.Header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    z-index: 10;
+    padding: 15px;
+    ol{
+        display: flex;
+    }
+    li{
+        list-style: none;
+        padding: 0 20px;
+
+    }
+    a{
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+    }
+}
