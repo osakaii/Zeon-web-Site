@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat&display=swap');
 
 /* Указываем box sizing */
 *,
@@ -30,7 +30,9 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  color: #222539;
 }
+
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
@@ -79,8 +81,27 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
+h1{
+  font-size: 48px;
+}
+h2{
+  font-size: 34px;
+}
+h3{
+  font-size: 28px;
+}
+h4{
+  font-size: 22px;
+}
+p{
+  font-size: 15px;
+}
+.button{
+  font-size: 16px;
+  padding: 13px 36px;
+}
 .container{
     width: 90%;
+    height: 100%;
     margin: 0 auto;
 }

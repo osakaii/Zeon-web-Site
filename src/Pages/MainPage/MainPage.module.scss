@@ -1,22 +1,160 @@
-
-.MainPage{
-
+.MainPage {
 }
-.firstSection{
-    position: relative; 
-    z-index: 0;
-    height: 100vh;
-    width: 100%;
-    background: url(../../Assets/mainPageImg.jpeg);
-    background-size: cover;
+.firstSection {
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(#0e1b3a, 0.65), rgba(#0e1b3a, 0.65)),
+    url(../../Assets/mainPageImg.jpeg);
+  background-size: cover;
 }
-.firstSection::before {    
-    content: "";
-    background-color: rgb(21, 36, 74);
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.45;
+
+.firstSectionMain {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    width: 29%;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    color: white;
+  }
+  p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    width: 25%;
+    letter-spacing: 1px;
+    color: white;
+    line-height: 164%;
+  }
+}
+
+.buttonDiv {
+  margin-top: 80px;
+}
+.button1 {
+  border: 1px solid #009ee3;
+  color: white;
+  background: #009ee3;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+.button2 {
+  border: 1px solid white;
+  margin: 0 15px;
+  color: white;
+  background: none;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+.whyUs {
+  margin: 30px 0 50px 0;
+  display: flex;
+  align-items: center;
+  h1 {
+    width: 15%;
+    margin-right: 5vw;
+  }
+  p {
+    font-size: 20px;
+    width: 75%;
+    letter-spacing: 1px;
+  }
+  li {
+    font-size: 20px;
+    list-style: inside;
+    margin-left: 20px;
+    letter-spacing: 1px;
+  }
+}
+.whyUsImg {
+  width: 100%;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #E0E8F9;
+}
+.secondSectionCompanies{
+  margin: 30px 0 80px;
+  display: flex;
+  align-items: center;
+  p{
+    font-size: 26px;
+    color: #676767 ;
+    height: 40px;
+  }
+}
+
+.thirdSection{
+  div{
+    display: flex;
+  }
+}
+.thirdSectionBox{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: space-around;
+  padding: 60px;
+  border: 1px solid #F0F0F0 ;
+  p{
+    font-size: 18px;
+    letter-spacing: 0.7px;
+  }
+}
+
+.fourthSection{
+  margin-bottom: 200px;
+  h2{
+    margin: 70px 0;
+  }
+  p{
+    font-size: 20px;
+    margin: 50px 0;
+  }
+  div{
+    div{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+}
+.fourthSectionBlock{
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.fourthImage{
+  background: url("../../Assets/нашиНаправления/Rectangle\ 863.png");
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+.fourthImage2{
+  background: url("../../Assets/нашиНаправления/Rectangle\ 864.png");
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+.fourthLang{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 150px;
+}
+
+.fifthSection{
+  div{
+    div{
+      display: flex;
+    }
+  }
+}
+.fifthBlock{
+  div{
+    display: flex;
+    flex-direction: column;
+  }
 }
