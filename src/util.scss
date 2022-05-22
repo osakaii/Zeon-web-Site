@@ -1,0 +1,16 @@
+
+$color-light-gray: #5E737C;
+$color-blue: #009EE3;
+
+.blue_color{
+    color: $color-blue;
+    font-size: 22px;
+}
+.light-gray_color{
+    color: $color-light-gray;
+}
+.button{
+    font-size: 16px;
+    padding: 13px 36px;
+    border-radius: 2px;
+}

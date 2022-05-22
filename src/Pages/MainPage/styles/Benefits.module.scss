@@ -1,0 +1,41 @@
+
+.benefits{
+    background: linear-gradient(0deg, #F8FCFF, #F8FCFF), #C4C4C4;
+}
+.benefits__content{
+    padding: 100px 0 60px 0;
+}
+.titleDiv{
+    p{
+        width: 30%;
+    }
+}
+.items__wrapper{
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    div{
+        width: 33%;
+        svg{
+            color: black;
+        }
+        p{
+            font-size: 17px;
+            font-weight: 300;
+        }
+        h4{
+            margin: 10px 0;
+        }
+    }
+}
+.first{
+    padding-right: 5%;
+}
+.second{
+    padding: 0 2.5%;
+    border-left: 1px solid #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+}
+.third{
+    padding-left: 5%;
+}

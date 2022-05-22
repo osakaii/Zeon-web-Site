@@ -6,8 +6,8 @@
 *::after {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth !important;
 }
-
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
@@ -37,8 +37,8 @@ dd {
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
   line-height: 1.5;
 }
 
@@ -85,23 +85,26 @@ h1{
   font-size: 48px;
 }
 h2{
-  font-size: 34px;
+  font-size: 36px;
+  margin: 10px 0;
 }
 h3{
   font-size: 28px;
 }
 h4{
   font-size: 22px;
+  font-weight: 600;
+}
+h5{
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
 }
 p{
   font-size: 15px;
 }
-.button{
-  font-size: 16px;
-  padding: 13px 36px;
-}
 .container{
-    width: 90%;
+    width: 85%;
     height: 100%;
     margin: 0 auto;
 }

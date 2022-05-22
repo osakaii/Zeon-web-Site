@@ -1,0 +1,26 @@
+.block {
+  width: calc((100% / 3) - 20px);
+  img {
+    width: 100%;
+  }
+  h5{
+    margin: 20px 0 0 0;
+  }
+}
+.date {
+  color: #999999;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 14px 0;
+}
+.desc {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: #5e737c;
+}
