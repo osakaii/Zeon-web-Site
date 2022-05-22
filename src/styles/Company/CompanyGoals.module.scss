@@ -1,0 +1,33 @@
+
+
+.goalsContent{
+    padding: 100px 0 200px 0;
+}
+.title{
+    h3{
+        font-size: 32px;
+    }
+    p{
+        color: #5E737C;
+        margin: 24px 0;
+    }
+}
+.itemsWrapper{
+    display: flex;
+    gap: 24px;
+}
+.item{
+    background: #FAFAFF;
+    width: calc(33% - 16px);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    span{
+        width: 100%;
+        border-top: 1px solid #E0E0E0;
+        margin: 20px 0;
+    }
+    p{
+        color: #5E737C;
+    }
+}
