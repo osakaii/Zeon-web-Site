@@ -8,6 +8,7 @@ import NewsInfoPage from './Pages/NewsInfoPage/NewsInfoPage';
 import ContactPage from './Pages/Contact/ContactPage';
 import CareerPage from './Pages/Career/CareerPage';
 import NotFound from "./Pages/NotFound/NotFound";
+import DeveloperPage from './Pages/DeveloperPage/DeveloperPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/blog/:id" element={<NewsInfoPage/>} />
         <Route path="/contact" element={<ContactPage/>} />
         <Route path="/career" element={<CareerPage/>} />
+        <Route path="/career/:id" element={<DeveloperPage/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </div>

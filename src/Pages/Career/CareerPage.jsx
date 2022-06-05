@@ -38,6 +38,12 @@ function CareerPage(props) {
                     <CareerSearchBar/>
                     <div className={styles.DevelopersWrapper}>
                         {
+                            developerList.length === 0 ? 
+                            <div className={styles.emptyDev}>There is no developers now...</div>
+                            :
+                            null
+                        }
+                        {
                             developerList?.map((developer, index) =>{
                                 return (
                                     <DeveloperInfo key = {developer.id} developerInfo = {developer}/>

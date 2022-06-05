@@ -17,7 +17,7 @@
     width: calc(100%/3);
     p {
       text-align: left;
-      font-size: 20px;
+      font-size: 16px;
       font-family: "Montserrat";
       font-style: normal;
       color: #315f83;
@@ -29,8 +29,7 @@
     align-items: center;
     width: 50%;
     justify-content: space-between;
-    img {
-      width: 120px;
+    svg{
       margin-bottom: 20px;
     }
     p {
@@ -38,4 +37,11 @@
       text-align: center;
     }
   }
+}
+.footer_bottom{
+  border-top: 1px solid rgba(177, 208, 255, 0.2);;
+  padding: 20px 0 36px;
+  text-align: center;
+  color: #6A96B8;
+  font-size: 16px;
 }

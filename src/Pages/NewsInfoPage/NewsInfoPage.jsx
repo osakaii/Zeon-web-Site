@@ -30,7 +30,7 @@ function NewsInfoPage(props) {
           <h2 className={styles.title}>{newsInfo?.title}</h2>
           <p className={styles.short_desc}>{newsInfo?.short_description}</p>
           <div className={styles.image}>
-              <img src={"http://217.25.90.28" + newsInfo?.img} alt="" />
+              <img src={newsInfo?.img} alt="" />
           </div>
           <p className={styles.text}>{newsInfo?.text}</p>
         </div>

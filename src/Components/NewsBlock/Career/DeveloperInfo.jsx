@@ -5,7 +5,6 @@ import styles from '../../../styles/Career/DeveloperInfo.module.scss'
 
 function DeveloperInfo(props) {
     const { name, short_description, office, relocation, remote, country, direction, id} = props.developerInfo
-    console.log(id)
 
     const [ workType, setWorkType ] = useState([])
 

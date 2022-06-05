@@ -1,0 +1,38 @@
+.contactMain {
+  background: url(../../Assets/contact/back.jpeg);
+  background-position: right;
+  height: 651px;
+}
+.info {
+  background: linear-gradient(
+    86.44deg,
+    #ffffff 18.97%,
+    rgba(255, 255, 255, 0) 95.18%
+  );
+  width: 60%;
+  height: 100%;
+  padding-left: 13%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h3 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 130%;
+  color: #222539;
+}
+h5 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #222539;
+  margin: 0;
+}
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #70759b;
+  margin-top: 40px;
+}

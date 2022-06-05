@@ -8,7 +8,7 @@ function NewsBlock(props) {
 
   return (
       <div  className={styles.block}>
-        <img src={URL + image} alt="newsImg" />
+        <img src={image} alt="newsImg" />
         <h5>{title}</h5>
         <p className={styles.date}>{date}</p>
         <p className={styles.desc}>{desc}</p>
