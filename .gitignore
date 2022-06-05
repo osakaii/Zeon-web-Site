@@ -1,9 +1,10 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+jhg# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+      cvvc. cc`sa	
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+
 
 # testing
 /coverage

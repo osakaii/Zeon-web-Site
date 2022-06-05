@@ -1,0 +1,57 @@
+.modalWindow {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modalForm {
+  width: 460px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 32px 42px 32px;
+  h4 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 145%;
+    margin: 18px 0 18px 0;
+  }
+  svg {
+    margin-left: auto;
+  }
+  input {
+    padding: 12px 18px;
+    border: 1px solid #dcdceb;
+    border-radius: 2px;
+    margin: 6px 0;
+  }
+  button {
+    background: #009ee3;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 17px;
+    padding: 13px 36px 14px;
+    margin-top: 42px;
+    border: none;
+    color: #ffffff;
+  }
+  p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 174%;
+    color: #464D7B;
+    margin-bottom: 32px;
+  }
+}
+.input::placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #7A7FAD;
+}

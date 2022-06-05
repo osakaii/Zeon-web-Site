@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/WhyUs.module.scss"
+import styles from "../../styles/MainPage/WhyUs.module.scss"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";
 

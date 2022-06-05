@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/Benefits.module.scss";
+import styles from "../../styles/MainPage/Benefits.module.scss";
 import clickImg from "../../Assets/Benefits/Icon/click.png";
 
 function Benefits(props) {

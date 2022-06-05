@@ -1,11 +1,19 @@
 .block {
-  width: calc((100% / 3) - 20px);
+  width: 100%;
   img {
     width: 100%;
+    aspect-ratio: 16/9;
   }
-  h5{
+  h5 {
     margin: 20px 0 0 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #222539;
   }
+}
+a {
+  text-decoration: none;
 }
 .date {
   color: #999999;

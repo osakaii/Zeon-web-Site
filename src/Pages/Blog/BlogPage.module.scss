@@ -1,0 +1,23 @@
+.blogContent {
+  padding: 80px 0;
+}
+.newsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.title {
+  color: #242c67;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 136.5%;
+}
+.titleDesc {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 153.5%;
+  color: #abd4eb;
+}
+.newsItem{
+    width: calc( 100%/3 - 20px );
+}

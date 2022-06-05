@@ -12,8 +12,10 @@
 .item{
     margin-bottom: 50px;
     display: flex;
+    gap: 40px;
     img{
-        width: 50%;
+        width: 40%;
+        height: 190px;
     }
 }
 .item_left{

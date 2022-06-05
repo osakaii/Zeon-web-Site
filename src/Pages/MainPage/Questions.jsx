@@ -1,8 +1,16 @@
-import React from "react";
-import styles from "./styles/Questions.module.scss";
+import React, { useState } from "react";
+import styles from "../../styles/MainPage/Questions.module.scss";
 import image from "../../Assets/questions.jpeg";
 
 function Questions(props) {
+
+  const [ answers, setAnswers ] = useState([
+    {
+      answer: "Стажировка стоит 15000 сом в месяц. Стоимость включает расходы на обучение. Оплату можно провести двумя способами: ежемесячно вносить 15000 сом или использовать вариант рассрочки. С отсрочкой платежа, плата начнет списываться ежемесячно уже после вашего трудоустройства на протяжении одного года. С учетом ежемесячного списания ваш оклад в начале составит примерно 700-800$",
+      isOpen: false
+    }
+  ])
+
   return (
     <section className={styles.questions}>
       <div className="container">
@@ -39,6 +47,7 @@ function Questions(props) {
                     />
                   </svg>
                 </div>
+                <p className={styles.answer}>{ answers.isOpen? answers.answer : null}</p>
               </div>
               <div className={styles.question}>
                 <div className={styles.number}>2</div>

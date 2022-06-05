@@ -16,23 +16,20 @@
   }
 }
 .main {
-  width: 100%;
+  width: calc(100% - 435px);
   h3{
       margin-bottom: 24px;
       line-height: 132%;
   }
 }
-.questionWrapper {
-}
 .question {
   display: flex;
   padding: 24px 0;
+  flex-wrap: wrap;
   border-bottom: 1px solid #C0D6FF99;
 }
 .question:nth-child(1){
     border-top: 1px solid #C0D6FF99;
-}
-.number {
 }
 .questionTitle {
   margin-left: 50px;
@@ -42,4 +39,7 @@
 }
 .plus {
     margin-left: auto;
+}
+.answer{
+  width: 100%;
 }

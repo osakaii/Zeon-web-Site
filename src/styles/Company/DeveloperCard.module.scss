@@ -1,0 +1,16 @@
+.card {
+  width: calc((100% / 4) - 32px);
+}
+.name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 145%;
+  color: #222539;
+  margin: 16px 0 6px 0;
+}
+.desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 145%;
+  color: #7986d9;
+}

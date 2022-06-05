@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "./styles/Stages.module.scss";
+import styles from "../../styles/MainPage/Stages.module.scss";
 import photo1 from "../../Assets/stages/img1.png";
 import photo2 from "../../Assets/stages/img2.png";
 import photo3 from "../../Assets/stages/img3.png";
 import photo4 from "../../Assets/stages/img4.png";
+import Buttons from '../../Common/buttons/Buttons';
 
 function Stages(props) {
   return (
@@ -20,10 +21,7 @@ function Stages(props) {
                 на программу.{" "}
               </p>
             </div>
-            <div className={styles.buttons}>
-              <button className={`${styles.filledBtn} button`}>Связаться с нами</button>
-              <button className={`${styles.btn} button`}>Пройти тест</button>
-            </div>
+          <Buttons name1 = "Связаться с нами" name2 = "Пройти тест"/>
           </div>
           <div className={styles.stages__right}>
             <div className={styles.item}>

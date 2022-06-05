@@ -12,9 +12,12 @@ import Paths from './Paths';
 import Footer from "../../Common/Footer/Footer";
 import Header from '../../Common/Header/Header';
 
+
 function MainPage(props) {
+
   return (
     <div className={styles.MainPage}>
+
       <Header filled = { false } />
       <Intro/>
       <WhyUs />

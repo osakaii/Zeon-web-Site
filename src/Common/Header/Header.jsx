@@ -1,44 +1,53 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./Header.module.scss";
 import blueLogo from "../../Assets/blue-logo.svg";
 import whiteLogo from "../../Assets/Header-zeon-logo.svg";
+import ContactUs from "../../Components/NewsBlock/contactUsModal/ContactUs";
 
-function Header({ filled }) {
-  // const [ headerName, setHeaderName ] = useState(styles.Header)
-  // useEffect(()=>{
-  //   window.addEventListener('scroll',(e)=>{
-  //     if(e.path[1].scrollY > 1080){
-  //       setHeaderName( `${headerName} ${styles.black}` )
-  //       console.log('passed')
-  //     }
-  //   })
-  // })
+function Header({ filled, location }) {
+
+  const nowPage = window.location.pathname.slice(1)
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    isModalOpen ? setIsModalOpen(false) : setIsModalOpen(true);
+  };
 
   return (
-    <div className={ filled ? styles.filledHeader : styles.Header}>
+    <div className={filled ? styles.filledHeader : styles.Header}>
+      <ContactUs show = { isModalOpen } toggleModal = {toggleModal}/>
       <div className="container">
-        <div className={ filled ? styles.filledHeaderContent : styles.headerContent}>
-          <Link to='/'>
-            <img src={filled ? blueLogo : whiteLogo} alt="logo" />
+        <div
+          className={filled ? styles.filledHeaderContent : styles.headerContent}
+        >
+          <Link to="/">
+            <img src={filled ? blueLogo : whiteLogo} alt="logo" className={styles.logo}/>
           </Link>
           <ol>
             <li>
-              <Link to="#">Career</Link>
+              <Link to="/career" className={ nowPage === 'career' ? styles.underlined : null}>Career</Link>
             </li>
             <li>
-              <Link to="/company">Company</Link>
+              <Link to="/company"  className={ nowPage === 'company' ? styles.underlined : null}>Company</Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog"  className={ nowPage === 'blog' ? styles.underlined : null}>Blog</Link>
             </li>
             <li>
-              <Link to="#">Contact</Link>
+              <Link to="/contact" className={ nowPage === 'contact' ? styles.underlined : null}>Contact</Link>
             </li>
             <li>
-              <Link to="#">
-                <button className={filled ? `button ${styles.filledBtn}` : `button ${styles.btn}`}>Contact Us</button>
-              </Link>
+              <button
+                className={
+                  filled ? `button ${styles.filledBtn}` : `button ${styles.btn}`
+                }
+                onClick={() => toggleModal()}
+              >
+                Contact Us
+              </button>
             </li>
           </ol>
         </div>
