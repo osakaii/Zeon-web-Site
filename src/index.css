@@ -107,3 +107,7 @@ p{
     height: 100%;
     margin: 0 auto;
 }
+
+button:active{
+  transform: scale(0.98);
+}

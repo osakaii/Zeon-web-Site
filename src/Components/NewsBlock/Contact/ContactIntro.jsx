@@ -10,7 +10,7 @@ function ContactIntro(props) {
         <div className={styles.introContent}>
           <p>Контакты </p>
           <h2>
-            Мы связываем людей и технологии. <br /> Оставайтесь на связи
+            Мы связываем людей и технологии. <br /> Оставайтесь <u> на связи</u>
           </h2>
           <p className={styles.desc}>
             Zeon It Hub - это международная компания по аутсорсингу и

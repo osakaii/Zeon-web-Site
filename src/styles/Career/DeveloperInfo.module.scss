@@ -1,0 +1,66 @@
+.developer {
+  border-top: 1px solid #c1cfff;
+  padding: 40px 0;
+}
+.workTypeWrapper {
+  display: flex;
+  gap: 10px;
+}
+.workType {
+  padding: 10px 32px;
+  background-color: #f2f4ff;
+  color: #767994;
+  font-size: 16px;
+  line-height: 120%;
+}
+.title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 145%;
+  color: #222539;
+  margin: 20px 0;
+}
+.info{
+    display: flex;
+    span{
+        height: 24px;
+        width: 1px;
+        border-left: 1px solid #c1cfff;
+        margin: 0 12px;
+    }
+}
+.country{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    img{
+        width: 32px;
+        height: 22px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 120%;
+        color: #474F7A;
+    }
+}
+.direction{
+    font-size: 16px;
+    line-height: 120%;
+    align-self: center;
+    color: #474F7A;
+}
+.shortDesc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 174%;
+    color: #464D7B;
+    margin: 28px 0;
+}
+.button{
+    color: #009EE3;
+    border: 1px solid #009EE3;
+    padding: 12px 26px;
+    background: none;
+    font-weight: 600;
+    border-radius: 2px;
+}
