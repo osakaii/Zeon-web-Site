@@ -6,8 +6,16 @@
     padding: 100px 0 60px 0;
 }
 .titleDiv{
+    h2{
+        font-size: 34px;
+        line-height: 130%;
+    }
     p{
-        width: 30%;
+        width: 50%;
+        font-size: 16px;
+line-height: 164%;
+color: #5E737C;
+
     }
 }
 .items__wrapper{
@@ -20,10 +28,12 @@
             color: black;
         }
         p{
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 300;
+            color: #5E737C;
         }
         h4{
+            font-size: 20px;
             margin: 10px 0;
         }
     }

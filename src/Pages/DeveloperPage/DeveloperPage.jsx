@@ -5,7 +5,8 @@ import parse from 'html-react-parser';
 import styles from "./DeveloperPage.module.scss";
 import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
-import ResponseModal from "../../Components/NewsBlock/responseModal/ResponseModal";
+import ResponseModal from "../../Components/Modals/ResponseModal";
+import { URL } from "../../constants";
 
 function DeveloperPage(props) {
   const developerId = useParams().id;
@@ -74,7 +75,7 @@ function DeveloperPage(props) {
       </div>
       <Footer />
       { 
-        showModal && <ResponseModal setShowModal = {setShowModal}/>
+        showModal && <ResponseModal setShowModal = {setShowModal} careerId = {developerId}/>
       }
     </div>
   );

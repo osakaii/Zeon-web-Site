@@ -3,7 +3,7 @@ import styles from "./BlogPage.module.scss";
 import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
 import { useState, useEffect } from "react";
-import NewsBlock from "../../Components/NewsBlock/NewsBlock";
+import NewsBlock from "../../Components/NewsBlock";
 import { Link } from "react-router-dom";
 import { getAllNews } from "../../axios";
 

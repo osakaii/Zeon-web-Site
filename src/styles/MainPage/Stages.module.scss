@@ -49,3 +49,27 @@
 .desc{
     padding: 0 5%;
 }
+.item__desc{
+    line-height: 140%;
+    color: #5E737C;
+}
+
+@media (max-width: 1200px) {
+    .stages__content{
+        flex-direction: column;
+        padding: 100px 0 60px 0;
+    }
+    .stages__left{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .stages__right{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 60px 0;
+    }
+    .item{
+        justify-content: space-between;
+    }
+}

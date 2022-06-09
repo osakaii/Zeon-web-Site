@@ -17,7 +17,6 @@ function MainPage(props) {
 
   return (
     <div className={styles.MainPage}>
-
       <Header filled = { false } />
       <Intro/>
       <WhyUs />

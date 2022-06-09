@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/MainPage/MainPageNew.module.scss";
 import { Link } from "react-router-dom";
-import NewsBlock from "../../Components/NewsBlock/NewsBlock";
+import NewsBlock from "../../Components/NewsBlock";
 import image1 from "../../Assets/News/img.jpg";
 import image2 from "../../Assets/News/img-1.jpg";
 import image3 from "../../Assets/News/img-2.jpg";

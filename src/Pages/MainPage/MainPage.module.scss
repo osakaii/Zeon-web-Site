@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   h1 {
-    width: 40%;
+    width: 50%;
     margin: 20px 0;
     letter-spacing: 1px;
     color: white;
@@ -64,6 +64,9 @@
   justify-content: space-around;
   padding: 60px;
   border: 1px solid #F0F0F0 ;
+  h3{
+    font-size: 2vw;
+  }
   p{
     font-size: 18px;
     letter-spacing: 0.7px;
@@ -76,16 +79,15 @@
     margin: 70px 0;
   }
   p{
-    font-size: 20px;
-    margin: 50px 0;
+    font-size: 16px;
+    margin: 30px 0;
   }
-  div{
-    div{
-    display: flex;
+}
+.pathBlocks{
+  display: flex;
     justify-content: space-between;
-  }
 }
-}
+
 .path__block{
   width: 48%;
   display: flex;
@@ -95,18 +97,20 @@
   background: url("../../Assets/нашиНаправления/Rectangle\ 863.png");
   background-size: cover;
   width: 100%;
-  height: 400px;
+  aspect-ratio: 16 / 9;
 }
 .fourthImage2{
   background: url("../../Assets/нашиНаправления/Rectangle\ 864.png");
   background-size: cover;
   width: 100%;
-  height: 400px;
+  aspect-ratio: 16 / 9;
 }
 .path__lang{
+  border-top: 1px solid #E7F0FF;
+  padding-top: 40px;
   display: flex;
-  justify-content: space-between;
-  padding-right: 150px;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .employees{
@@ -136,4 +140,38 @@
 .employees__item__wrapper{
   display: flex;
   gap: 30px;
+}
+
+@media (max-width: 1200px){
+  .employees__item__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .intro__content{
+    h1 {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 906px) {
+  .paths{
+    padding-top: 50px;
+  }
+  .pathBlocks{
+    flex-direction: column;
+    align-items: center;
+  }
+  .path__block{
+    width: 70%;
+    margin-top: 30px;
+  }
+  .paths{
+    margin-bottom: 20px;
+    h2{
+      text-align: center;
+      margin: 30px 0;
+    }
+  }
 }

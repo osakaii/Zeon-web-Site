@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import styles from "./CareerPage.module.scss"
 import Header from '../../Common/Header/Header';
 import Footer from '../../Common/Footer/Footer';
-import CareerIntro from '../../Components/NewsBlock/Career/CareerIntro';
+import CareerIntro from '../../Components/Career/CareerIntro';
 import photo1 from "../../Assets/career/img.jpg"
 import photo2 from "../../Assets/career/img2.jpg"
 import photo3 from "../../Assets/career/img3.jpg"
 import { getDevelopers } from '../../axios';
-import CareerSearchBar from '../../Components/NewsBlock/Career/CareerSearchBar';
-import DeveloperInfo from '../../Components/NewsBlock/Career/DeveloperInfo';
+import CareerSearchBar from '../../Components/Career/CareerSearchBar';
+import DeveloperInfo from '../../Components/Career/DeveloperInfo';
 
 function CareerPage(props) {
 

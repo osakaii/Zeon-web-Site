@@ -43,3 +43,12 @@
 .answer{
   width: 100%;
 }
+
+@media (max-width: 1200px) {
+  .image{
+    display: none;
+  }
+  .main {
+    width: 100%;
+  }
+}

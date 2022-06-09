@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ContactPage.module.scss";
 import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
-import ContactIntro from "../../Components/NewsBlock/Contact/ContactIntro";
+import ContactIntro from "../../Components/Contact/ContactIntro";
 import Buttons from "../../Common/buttons/Buttons";
 
 function ContactPage(props) {
