@@ -21,7 +21,7 @@ function App() {
         <Route path="/contact" element={<ContactPage/>} />
         <Route path="/career" element={<CareerPage/>} />
         <Route path="/career/:id" element={<DeveloperPage/>} />
-        <Route path="*" element={<NotFound/>} />
+        {/* <Route path="*" element={<NotFound/>} /> */}
       </Routes>
     </div>
   );
