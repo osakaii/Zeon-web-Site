@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Zeon-web-Site/static/css/main.4fa79f3d.css",
-    "main.js": "/Zeon-web-Site/static/js/main.6e38475a.js",
+    "main.js": "/Zeon-web-Site/static/js/main.c3a49fcb.js",
     "static/media/mainPageImg.jpeg": "/Zeon-web-Site/static/media/mainPageImg.016471e986c1150f9dc7.jpeg",
     "static/media/WhyUS.jpeg": "/Zeon-web-Site/static/media/WhyUS.102c9434cbcee3d8437f.jpeg",
     "static/media/Rectangle 864.png": "/Zeon-web-Site/static/media/Rectangle 864.d2f86e02930cf537e115.png",
@@ -38,10 +38,10 @@
     "index.html": "/Zeon-web-Site/index.html",
     "static/media/closeModal.svg": "/Zeon-web-Site/static/media/closeModal.ca7f3c7a64a76de1f5a612df5865aaa2.svg",
     "main.4fa79f3d.css.map": "/Zeon-web-Site/static/css/main.4fa79f3d.css.map",
-    "main.6e38475a.js.map": "/Zeon-web-Site/static/js/main.6e38475a.js.map"
+    "main.c3a49fcb.js.map": "/Zeon-web-Site/static/js/main.c3a49fcb.js.map"
   },
   "entrypoints": [
     "static/css/main.4fa79f3d.css",
-    "static/js/main.6e38475a.js"
+    "static/js/main.c3a49fcb.js"
   ]
 }
