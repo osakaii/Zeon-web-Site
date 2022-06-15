@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Zeon-web-Site/static/css/main.1735adcb.css",
-    "main.js": "/Zeon-web-Site/static/js/main.8eb3e460.js",
+    "main.css": "/Zeon-web-Site/static/css/main.4f6a96dd.css",
+    "main.js": "/Zeon-web-Site/static/js/main.fc77178f.js",
     "static/media/mainPageImg.jpeg": "/Zeon-web-Site/static/media/mainPageImg.016471e986c1150f9dc7.jpeg",
     "static/media/WhyUS.jpeg": "/Zeon-web-Site/static/media/WhyUS.102c9434cbcee3d8437f.jpeg",
     "static/media/Rectangle 864.png": "/Zeon-web-Site/static/media/Rectangle 864.d2f86e02930cf537e115.png",
@@ -34,14 +34,19 @@
     "static/media/Sweden.svg": "/Zeon-web-Site/static/media/Sweden.f580ec300bb5c4fba64d0f24f8e3b510.svg",
     "static/media/Norway.svg": "/Zeon-web-Site/static/media/Norway.13623ad8d57fe79c647fddccb011adbf.svg",
     "static/media/Poland.svg": "/Zeon-web-Site/static/media/Poland.fd5c0a1f282b2c2300acf8242b925d7e.svg",
+    "static/media/files.svg": "/Zeon-web-Site/static/media/files.22898602a374fb077befaea3e42a28f8.svg",
     "static/media/finland.svg": "/Zeon-web-Site/static/media/finland.02c45aa01b99db1b24f34565160fb526.svg",
+    "static/media/icons8-instagram.svg": "/Zeon-web-Site/static/media/icons8-instagram.8ff7ce92ad753b591ed4c1d03e84c026.svg",
+    "static/media/searchIcon.svg": "/Zeon-web-Site/static/media/searchIcon.515ed69d04e30cd98fa43d3d80ebdc75.svg",
     "index.html": "/Zeon-web-Site/index.html",
     "static/media/closeModal.svg": "/Zeon-web-Site/static/media/closeModal.ca7f3c7a64a76de1f5a612df5865aaa2.svg",
-    "main.1735adcb.css.map": "/Zeon-web-Site/static/css/main.1735adcb.css.map",
-    "main.8eb3e460.js.map": "/Zeon-web-Site/static/js/main.8eb3e460.js.map"
+    "static/media/facebook.svg": "/Zeon-web-Site/static/media/facebook.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
+    "static/media/plus.svg": "/Zeon-web-Site/static/media/plus.054f69bbda085879e2c5ba311ddf5f62.svg",
+    "main.4f6a96dd.css.map": "/Zeon-web-Site/static/css/main.4f6a96dd.css.map",
+    "main.fc77178f.js.map": "/Zeon-web-Site/static/js/main.fc77178f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1735adcb.css",
-    "static/js/main.8eb3e460.js"
+    "static/css/main.4f6a96dd.css",
+    "static/js/main.fc77178f.js"
   ]
 }
