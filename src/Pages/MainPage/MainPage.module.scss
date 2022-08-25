@@ -1,11 +1,9 @@
-
 .intro {
   position: relative;
   z-index: 0;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(rgba(#0e1b3a, 0.65), rgba(#0e1b3a, 0.65)),
-    url(../../Assets/mainPageImg.jpeg);
+  background: url(../../Assets/MainPage/IntroBackground.jpeg);
   background-size: cover;
 }
 
@@ -14,7 +12,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 90px;
   h1 {
     width: 50%;
     margin: 20px 0;
@@ -24,7 +23,7 @@
   p {
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1px;
     color: white;
     line-height: 164%;
@@ -50,105 +49,130 @@
   font-weight: 200;
 }
 
-
-.findWork{
-  div{
+.findWork {
+  div {
     display: flex;
   }
 }
-.findWork__box{
+.findWork__box {
   width: 50%;
   display: flex;
   flex-direction: column;
-  height: 450px;
   justify-content: space-around;
   padding: 60px;
-  border: 1px solid #F0F0F0 ;
-  h3{
-    font-size: 2vw;
+  gap: 40px;
+  border: 1px solid #f0f0f0;
+  h3 {
+    font-size: 28px;
   }
-  p{
+  p {
     font-size: 18px;
     letter-spacing: 0.7px;
   }
 }
 
-.paths{
+.paths {
   margin-bottom: 100px;
-  h2{
+  h2 {
     margin: 70px 0;
   }
-  p{
-    font-size: 16px;
-    margin: 30px 0;
-  }
 }
-.pathBlocks{
+.underImgTxt {
+  font-size: 16px;
+  margin-top: 30px;
+}
+.pathBlocks {
   display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
-.path__block{
+.path__block {
   width: 48%;
   display: flex;
   flex-direction: column;
 }
-.fourthImage{
+.fourthImage {
   background: url("../../Assets/нашиНаправления/Rectangle\ 863.png");
   background-size: cover;
   width: 100%;
+  padding: 24px;
   aspect-ratio: 16 / 9;
+  a{
+    display: inline-block;
+  }
 }
-.fourthImage2{
+.fourthImage2 {
   background: url("../../Assets/нашиНаправления/Rectangle\ 864.png");
   background-size: cover;
   width: 100%;
+  padding: 24px;
   aspect-ratio: 16 / 9;
 }
-.path__lang{
-  border-top: 1px solid #E7F0FF;
+.imageDiv {
+  background-color: #fff;
+  padding: 8px 16px;
+  max-width: 182px;
+  gap: 24px;
+  display: flex;
+}
+.imgTxt {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 132%;
+  color: #222539;
+}
+.imgMiniTxt {
+  font-size: 12px;
+  line-height: 132%;
+  color: #5c6287;
+}
+.path__lang {
+  border-top: 1px solid #e7f0ff;
   padding-top: 40px;
   display: flex;
-  width: 100%;
-  justify-content: space-around;
+  width: 85%;
+  justify-content: space-between;
+  img {
+    width: calc(20%);
+  }
 }
 
-.employees{
+.employees {
   padding: 100px 0;
-  div{
-    div{
+  div {
+    div {
       display: flex;
     }
   }
 }
-.employees__item{
+.employees__item {
   padding: 24px 16px;
-  img{
+  img {
     width: 50px;
     height: 50px;
     margin: 10px;
   }
-  div{
+  div {
     display: flex;
     flex-direction: column;
     height: 120%;
-    p{
+    p {
       margin: 5px 0;
     }
   }
 }
-.employees__item__wrapper{
+.employees__item__wrapper {
   display: flex;
   gap: 30px;
 }
 
-@media (max-width: 1200px){
-  .employees__item__wrapper{
+@media (max-width: 1200px) {
+  .employees__item__wrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
-  .intro__content{
+  .intro__content {
     h1 {
       width: 80%;
     }
@@ -156,22 +180,100 @@
 }
 
 @media (max-width: 906px) {
-  .paths{
+  .paths {
     padding-top: 50px;
   }
-  .pathBlocks{
+  .pathBlocks {
     flex-direction: column;
     align-items: center;
   }
-  .path__block{
+  .path__block {
     width: 70%;
     margin-top: 30px;
   }
-  .paths{
+  .paths {
     margin-bottom: 20px;
-    h2{
+    h2 {
       text-align: center;
       margin: 30px 0;
+    }
+  }
+
+  .findWork {
+    div {
+      flex-direction: column;
+    }
+  }
+  .findWork__box {
+    width: 100%;
+    gap: 20px;
+    padding: 25px 20px;
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .fourthImage {
+    padding: 12px;
+  }
+  .fourthImage2 {
+    padding: 12px;
+  }
+  .imageDiv {
+    gap: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 525px) {
+  .intro__content {
+    h1 {
+      font-size: 32px;
+      width: 100%;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .buttonDiv {
+    display: flex;
+    justify-content: space-between;
+    button {
+      padding: 12px 0;
+      font-size: 14px;
+    }
+    .button1 {
+      width: 60%;
+    }
+    .button2 {
+      width: 40%;
+    }
+  }
+
+  .path__block {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .paths {
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin: 14px 0;
+    }
+  }
+  .underImgTxt {
+    font-size: 14px;
+  }
+  .path__block {
+    li {
+      font-size: 14px;
+    }
+  }
+
+  .employees__item {
+    display: flex;
+    flex-direction: column;
+    img {
+      margin: 0;
     }
   }
 }

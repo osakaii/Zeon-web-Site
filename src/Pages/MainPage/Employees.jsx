@@ -1,60 +1,35 @@
 import styles from "./MainPage.module.scss";
-import React from 'react';
+import React from "react";
 import employeeImg from "../../Assets/OurEmp.png";
+import { STATIC_DATA } from "../../static";
 
 function Employees(props) {
-    return (
-        <section className={styles.employees}>
-        <div className="container">
-          <div></div>
-          <h2>Our employees</h2>
-          <div className={styles.employees__item__wrapper}>
-            <div className={styles.employees__item}>
-              <img src={employeeImg} alt="" />
-              <div>
-                <p className="light-gray_color">United State</p>
-                <h3>Alan Kuper</h3>
-                <p className="blue_color">Junior programmer at Google</p>
-                <p className="light-gray_color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vel condimentum velit, eget vulputate sapien.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                  vel condimentum velit, eget vulputate sapien.
-                </p>
+  return (
+    <section className={styles.employees}>
+      <div className="container">
+        <h2>Our employees</h2>
+        <div className={styles.employees__item__wrapper}>
+          {STATIC_DATA.employees.map((person, index) => {
+            return (
+              <div className={styles.employees__item} key = {person.name + person.country + index}>
+                <img src={employeeImg} alt="" />
+                <div>
+                  <p className="light-gray_color">
+                    {person.country}
+                  </p>
+                  <h3>{person.name}</h3>
+                  <p className="blue_color">
+                    {person.qualification}
+                  </p>
+                  <p className="light-gray_color">{person.description}</p>
+                </div>
               </div>
-            </div>
-            <div className={styles.employees__item}>
-              <img src={employeeImg} alt="" />
-              <div>
-                <p className="light-gray_color">United State</p>
-                <h3>Alan Kuper</h3>
-                <p className="blue_color">Junior programmer at Google</p>
-                <p className="light-gray_color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vel condimentum velit, eget vulputate sapien.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                  vel condimentum velit, eget vulputate sapien.
-                </p>
-              </div>
-            </div>
-            <div className={styles.employees__item}>
-              <img src={employeeImg} alt="" />
-              <div>
-                <p className="light-gray_color">United State</p>
-                <h3>Alan Kuper</h3>
-                <p className="blue_color">Junior programmer at Google</p>
-                <p className="light-gray_color">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vel condimentum velit, eget vulputate sapien.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                  vel condimentum velit, eget vulputate sapien.
-                </p>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
 }
 
 export default Employees;

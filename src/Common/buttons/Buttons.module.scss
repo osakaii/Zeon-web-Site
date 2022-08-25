@@ -1,5 +1,8 @@
 .buttons{
     margin-top: 32px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 .filledBtn{
     background-color: #009EE3;
@@ -7,8 +10,20 @@
     color: white; 
 }
 .btn{
-    border: 1px solid #009EE3;
-    color: #009EE3;
-    background-color: white;
-    margin-left: 13px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+
+@media (max-width: 525px) {
+    .buttons{
+        width: 100%;
+        display: flex;
+        gap: 12px;
+        button{
+            padding: 12px 4px;
+            margin: 0;
+            width: 100%;
+        }
+    }
 }

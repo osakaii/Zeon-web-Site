@@ -22,3 +22,13 @@
 .newsItem{
   width: calc( 100%/3 - 20px );
 }
+
+@media (max-width: 769px) {
+  .newsWrapper{
+    flex-direction: column;
+    gap: 60px;
+  }
+  .newsItem{
+    width: 100%;
+  }
+}

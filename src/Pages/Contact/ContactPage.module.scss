@@ -1,17 +1,28 @@
 .contactMain {
-  background: url(../../Assets/contact/back.jpeg);
+  // background: url(../../Assets/contact/background.jpeg);
   background-position: right;
   height: 651px;
+  position: relative;
+}
+.background {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  top: 0;
+  left: 30%;
+  right: 0;
+  bottom: 0;
 }
 .info {
+  width: 50%;
+  height: 100%;
   background: linear-gradient(
     86.44deg,
     #ffffff 18.97%,
     rgba(255, 255, 255, 0) 95.18%
   );
-  width: 60%;
-  height: 100%;
-  padding-left: 13%;
+  backdrop-filter: blur(18px);
+  padding: 120px 0 120px 13%;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -34,5 +45,76 @@
     line-height: 20px;
     color: #70759b;
     margin-top: 40px;
-  }  
+  }
+}
+.socialIcons {
+  display: flex;
+  padding: 12px 0;
+  gap: 6px;
+  svg {
+    cursor: pointer;
+  }
+}
+.mapMark {
+  position: absolute;
+  top: 200px;
+  right: 25vw;
+}
+
+@media (max-width: 1080px){
+  .contactMain {
+    height: auto;
+  }
+  .info{
+    padding: 60px 0 60px 13%;
+    width: 60%;
+    p{
+      margin-top: 12px;
+    }
+  }
+  .mapMark{
+    top: 150px;
+  }
+}
+
+@media (max-width: 856px) {
+  .info {
+    width: auto;
+    margin: 0 auto;
+    padding: 24px 120px 48px ;
+    h3 {
+      font-size: 32px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+  }
+  .background{
+    margin: 24px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: static;
+  }
+  .mapMark {
+    width: 70px;
+    height: 110px;
+    right: 40vw;
+    top: 12%;
+  }
+}
+
+@media (max-width: 639px) {
+  .mapMark {
+    top: 9%;
+  }
+  .info{
+    padding: 24px 60px 48px;
+  }
+}
+@media (max-width: 531px){
+  .mapMark {
+    top: 15vw;
+    right: 42vw;
+    width: 40px;
+    height: 55px;
+  }
 }

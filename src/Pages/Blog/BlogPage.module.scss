@@ -1,5 +1,7 @@
+
 .blogContent {
   padding: 80px 0;
+  min-height: calc(100vh - 292px);
 }
 .newsWrapper {
   display: flex;
@@ -20,4 +22,20 @@
 }
 .newsItem{
     width: calc( 100%/3 - 20px );
+}
+.emptyNews{
+  font-size: 38px;
+  font-weight: 600;
+  color: rgb(78, 78, 78);
+}
+
+@media (max-width: 916px) {
+  .newsItem{
+    width: calc( 100%/2 - 20px );
+  }
+}
+@media (max-width: 525px) {
+  .newsItem{
+    width: calc( 100% );
+  }
 }

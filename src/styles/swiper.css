@@ -1,9 +1,11 @@
 .swiper {
   margin-left: auto;
+  width: 70%;
   height: 100px;
 }
 .swiper-slide{
   display: flex;
+  user-select: none;
   align-items: center;
   font-size: 14px;
   color: #7577AB;

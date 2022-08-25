@@ -3,12 +3,10 @@ import styles from "./CareerPage.module.scss"
 import Header from '../../Common/Header/Header';
 import Footer from '../../Common/Footer/Footer';
 import CareerIntro from '../../Components/Career/CareerIntro';
-import photo1 from "../../Assets/career/img.jpg"
-import photo2 from "../../Assets/career/img2.jpg"
-import photo3 from "../../Assets/career/img3.jpg"
 import { getDevelopers } from '../../axios';
 import CareerSearchBar from '../../Components/Career/CareerSearchBar';
 import DeveloperInfo from '../../Components/Career/DeveloperInfo';
+import CareerWhyUs from '../../Components/Career/CareerWhyUs';
 
 function CareerPage(props) {
 
@@ -28,27 +26,20 @@ function CareerPage(props) {
         <div className={styles.career}>
             <Header filled = { false } />
                 <CareerIntro/>
-                <div className={styles.photosWrapper}>
-                    <img src={photo1} alt="" />
-                    <img src={photo2} alt="" />
-                    <img src={photo3} alt="" />
-                </div>
+                <CareerWhyUs/>
                 <div className={`${styles.container} container`}>
                     <h2>Вакансии</h2>
-                    <CareerSearchBar/>
+                    <CareerSearchBar setDeveloperList = {setDeveloperList}/>
                     <div className={styles.DevelopersWrapper}>
-                        {
-                            developerList.length === 0 ? 
-                            <div className={styles.emptyDev}>There is no developers now...</div>
-                            :
-                            null
-                        }
-                        {
+                        {   
+                            developerList?.length ?
                             developerList?.map((developer, index) =>{
                                 return (
                                     <DeveloperInfo key = {developer.id} developerInfo = {developer}/>
                                 )
                             })
+                            :
+                            <div className={styles.emptyDev}>There is no developers now...</div>
                         }
                     </div>
                 </div>

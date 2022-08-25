@@ -1,5 +1,8 @@
 .card {
   width: calc((100% / 4) - 32px);
+  img{
+    width: 100%;
+  }
 }
 .name {
   font-weight: 600;
@@ -13,4 +16,23 @@
   font-size: 16px;
   line-height: 145%;
   color: #7986d9;
+}
+
+@media (max-width: 956px) {
+  .card {
+    width: calc((100% / 2) - 16px);
+  }
+}
+
+@media (max-width: 460px) {
+  .card {
+    width: 100%;
+    margin: 22px 0;
+  }
+  .name{
+    font-size: 34px;
+  }
+  .desc{
+    font-size: 24px;
+  }
 }

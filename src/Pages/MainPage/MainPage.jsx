@@ -22,7 +22,6 @@ function MainPage(props) {
       <WhyUs />
       <FindWork/>
       <Paths/>
-      <Employees/>
       <Benefits/>
       <Stages/>
       <Questions/>

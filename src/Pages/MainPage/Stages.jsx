@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/MainPage/Stages.module.scss";
-import photo1 from "../../Assets/stages/img1.png";
-import photo2 from "../../Assets/stages/img2.png";
-import photo3 from "../../Assets/stages/img3.png";
-import photo4 from "../../Assets/stages/img4.png";
+import photo1 from "../../Assets/stages/img1.jpeg";
+import photo2 from "../../Assets/stages/img2.jpeg";
+import photo3 from "../../Assets/stages/img3.jpeg";
+import photo4 from "../../Assets/stages/img4.jpeg";
 import Buttons from "../../Common/buttons/Buttons";
 import ContactUs from "../../Components/Modals/ContactUs";
 
@@ -11,7 +11,6 @@ function Stages(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const closeModal = () => {
-    console.log("hello");
     setIsModalOpen(true);
   };
 
@@ -23,11 +22,11 @@ function Stages(props) {
           <div className={styles.stages__left}>
             <div className={styles.title}>
               <h2>Этапы повышения квалификции</h2>
-              <p >
+              <p className={styles.item__desc}>
                 Программа повышения квалификации рассчитана на junior
                 разработчиков с хорошей теоритической базой. Именно поэтому мы
                 проводим 3х этапный отбор результатом, которого будет зачисление
-                на программу.{" "}
+                на программу.
               </p>
             </div>
             <Buttons

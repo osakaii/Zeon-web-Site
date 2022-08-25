@@ -8,10 +8,8 @@ function CompanyIntro(props) {
             <img src={backgroundLogo} alt="" />
             <div className="container">
                 <div className={styles.introContent}>
-                    <p>О нас</p>
-                    <h2>Мы объединяем людей для <br /> достижения общих целей </h2>
-                    <p className={styles.desc}>Мы обеспечиваем талантливых специалистов достойной работой, а также даем компаниям возможность 
-                        работать с трудолюбивыми разработчиками на максимально выгодных для обеих сторон условиях.</p>
+                    <h2>Zeon IT Hub - первая outstaff компания в Центральной Азии</h2>
+                    <p className={styles.desc}>Мы готовим специалистов адаптированных под критерии международных компаний.</p>
                 </div>
             </div>
         </section>

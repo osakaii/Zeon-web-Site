@@ -1,9 +1,10 @@
 import axios from "axios";
 import { API } from "./constants";
 
+
 export const getAllNews = async () => {
   try {
-    const response = await axios.get(`${API}/news/`);
+    const response = await axios.get(`${API}/new/`);
     return await response.data;
   } catch (e) {
     console.error("getAllNews", e);
@@ -12,12 +13,22 @@ export const getAllNews = async () => {
 
 export const getNewsById = async (id) => {
   try {
-    const response = await axios.get(`${API}/news/${id}/`);
+    const response = await axios.get(`${API}/new/${id}/`);
     return await response.data;
   } catch (e) {
     console.error("getNewsById", e);
   }
 };
+
+export const getNewNews = async () => {
+  try {
+    const response = await axios.get(`${API}/new_news/`);
+    return await response.data;
+  } catch (e) {
+    console.error("getNewNews", e);
+  }
+};
+
 
 export const getDevelopers = async () => {
   try {
@@ -39,10 +50,10 @@ export const getDeveloperById = async (id) => {
 
 export const sendCareerResponse = async (body) => {
   try {
-    const response = await axios.post(`${API}/loading/`, body, {
+    console.log(body)
+    const response = await axios.post(`${API}/loading/`, body , {
       headers: {
-        // "Access-Control-Allow-Headers":"*",
-        "Content-Type": "multipart/form-data, application/json",
+        "Content-Type": "multipart/form-data; boundary=<calculated when request is sent>",
       },
     });
     console.log(response);
@@ -51,11 +62,57 @@ export const sendCareerResponse = async (body) => {
   }
 };
 
-export const sendContacts = async (body) => {
+export const sendFeedback = async (body) =>{
   try {
-    const response = await axios.post(`${API}/loading/`, body);
+    const response = await axios.post(`${API}/feedback/create/`, body, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
     console.log(response);
+    return response.status
   } catch (e) {
-    console.error("getDeveloperById", e);
+    console.error("sendFeedback", e);
+  }
+}
+
+export const getFilteredCareer = async (name, remote, office, relocation, direction = "", country = "", search) =>{
+  try {
+    const response = await axios.get(`${API}/career_filter?name=${name}&remote=${remote}&office=${office}&relocation=${relocation}&direction=${direction}`);
+    console.log(response)
+    return response;
+  } catch (e) {
+    console.error("getFilteredCareer", e);
+  }
+}
+
+export const getCountryList = async (id) => {
+  try {
+    const response = await axios.get(`${API}/country/list/`);
+    console.log(response)
+    return await response.data;
+  } catch (e) {
+    console.error("getCountryList", e);
   }
 };
+
+export const getDirectionList = async (id) => {
+  try {
+    const response = await axios.get(`${API}/direction/list/`);
+    console.log(response)
+    return await response.data;
+  } catch (e) {
+    console.error("getDirectionList", e);
+  }
+};
+
+export const register = async (body) => {
+  try {
+    const response = await axios.post(`${API}/auth/register/`, body);
+    console.log(response)
+    return response;
+  } catch (e) {
+    console.error("getDirectionList", e);
+  }
+};
+

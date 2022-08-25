@@ -1,66 +1,81 @@
 .whyUs {
-    margin: 30px 0 50px 0;
-    display: flex;
-    align-items: center;
-    h1 {
-      width: 15%;
-      margin-right: 5vw;
-    }
-    p {
-      font-size: 20px;
-      width: 75%;
-      letter-spacing: 1px;
-    }
-    li {
-      font-size: 20px;
-      list-style: inside;
-      margin-left: 20px;
-      letter-spacing: 1px;
-    }
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+  h2 {
+    width: 15%;
+    margin-right: 5vw;
   }
-  .whyUsImg {
-    width: 100%;
-    padding-bottom: 50px;
-    border-bottom: 2px solid #E0E8F9;
+  p {
+    font-size: 16px;
+    letter-spacing: 1px;
   }
-  .secondSectionCompanies{
-    margin: 30px 0 80px;
-    display: flex;
-    align-items: center;
-    p{
-      margin: 0;
-      font-size: 16px;
-      width: 40%;
-      color: #676767 ;
-    }
+}
+.whyUsImg {
+  width: 100%;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #e0e8f9;
+}
+.secondSectionCompanies {
+  margin: 30px 0 80px;
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0 0 18px 0;
+    font-size: 16px;
+    width: 40%;
+    color: #676767;
   }
-
-  .swiperItem{
-      font-size: 5px;
-      svg{
-          width: 50%;
-          height: 50%;
-      }
-  }
-
-.swiperGrayIcon *{
-  fill: #ABACC7;
 }
 
-@media (max-width: 1200px){
-  .whyUs{
+.swiperItem {
+  font-size: 5px;
+  gap: 12px;
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .whyUs {
     flex-direction: column;
-    h1{
+    h2 {
       width: 100%;
       margin: 15px 0;
     }
   }
-  .secondSectionCompanies{
+  .secondSectionCompanies {
     padding-top: 40px;
     flex-direction: column;
-    p{
+    p {
       font-size: 24px;
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 769px) {
+  .whyUs {
+    margin: 32px 0;
+    h2 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 16px;
+      letter-spacing: 0.6px;
+    }
+    li {
+      font-size: 16px;
+    }
+  }
+  .swiperItem {
+    font-size: 5px;
+    gap: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 }

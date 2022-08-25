@@ -15,15 +15,22 @@
   ol {
     display: flex;
     align-items: center;
+    gap: 30px;
   }
   li {
     list-style: none;
-    padding: 0 20px;
   }
   a {
     text-decoration: none;
     font-size: 18px;
     color: white;
+  }
+}
+.logo{
+  width: clamp(120px, 13%, 150px);
+
+  img{
+    width: 100%;
   }
 }
 .filledHeader{
@@ -44,10 +51,11 @@
   ol {
     display: flex;
     align-items: center;
+    gap: 30px;
   }
   li {
     list-style: none;
-    padding: 0 20px;
+    // padding: 0 20px;
   }
   a {
     text-decoration: none;
@@ -72,32 +80,32 @@
 }
 
 .mobileNav{
+  transition: 0.5s;
   width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 100%;
-  background-color: #006794ce;
+  background-color: #024764e2;
   display: flex;
   justify-content: center;
   align-items: center;
   .nav{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 24px;
   }
   a{
-    font-size: 40px;
+    font-size: 28px;
     color: white;
   }
   button{
-    padding: 15px 40px;
-    font-size: 32px;
+    padding: 10px 22px;
+    font-size: 22px;
   }
 }
 
 .burgerBtn{
-  position: fixed;
   z-index: 100;
   right: 30px;
   top: 5px;
@@ -109,23 +117,15 @@
   gap: 6px;
   align-items: center;
   border-radius: 50%;
-  background-color: rgba(20, 184, 255, 0.523);
-  transition: .5s;
+  background-color: rgba(255, 255, 255, 0.818);
+  transition: 0.5s;
   span{
     width: 50%;
     height: 4px;
-    background-color: white;
+    background-color: rgb(43, 43, 43);
     border-radius: 10px;
   }
 }
 .opened{
   left: 0;
-}
-
-@media (max-width: 916px) {
-  .headerContent{
-    li{
-      padding: 0 15px;
-    }
-  }
 }

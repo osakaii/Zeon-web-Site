@@ -8,20 +8,19 @@ function CompanySpecifity(props) {
       <div className="container">
         <div className={styles.specContent}>
           <div className={styles.main}>
-            <h1>В чем наша особенность?</h1>
+            <h1>Почему выбирают нас?</h1>
             <div className={styles.info}>
               <p className={styles.desc}>
-                Мы являемся связующим звеном между компаниями заинтересованными
-                в кадрах и талантливыми разработчиками ищущих интересные
-                международные проекты и хорошую зарплату.
+              Первый IT Hub в Центральной Азии, первоначальной целью 
+              которого является образовать связь между талантливыми разработчиками 
+              в поисках интересных проектов и IT компаниями нуждающихся в ценных кадрах.
               </p>
               <div className={styles.stat}>
                 <div className={styles.statItem}>
                   <p className={styles.statInfo}>
-                    {" "}
-                    <span>$</span>1500
+                    <span>$</span>800
                   </p>
-                  <p className={styles.statDesc}>Средняя заработная плата</p>
+                  <p className={styles.statDesc}>Минимальная <br /> заработная плата</p>
                 </div>
                 <div className={styles.statItem}>
                   <p className={styles.statInfo}>20</p>
@@ -29,10 +28,10 @@ function CompanySpecifity(props) {
                 </div>
                 <div className={styles.statItem}>
                   <p className={styles.statInfo}>
-                    145 <span>+</span>
+                    100 <span>+</span>
                   </p>
                   <p className={styles.statDesc}>
-                    Трудоустроенных разработчиков
+                    Штат сотрудников
                   </p>
                 </div>
               </div>

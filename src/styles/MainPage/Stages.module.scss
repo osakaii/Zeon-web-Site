@@ -2,9 +2,14 @@
 .stages__content{
     display: flex;
     padding: 200px 0 120px 0;
+    gap: 40px;
+    position: relative;
 }
 .stages__left{
+    position: sticky;
+    top: 30%;
     width: 40%;
+    max-height: 400px;
 }
 .stages__right{
     width: 60%;
@@ -50,7 +55,9 @@
     padding: 0 5%;
 }
 .item__desc{
-    line-height: 140%;
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 160%;
     color: #5E737C;
 }
 
@@ -62,6 +69,7 @@
     .stages__left{
         width: 70%;
         margin: 0 auto;
+        position: static;
     }
     .stages__right{
         width: 100%;
@@ -71,5 +79,23 @@
     }
     .item{
         justify-content: space-between;
+    }
+}
+
+@media (max-width: 769px) {
+    .stages__left{
+        width: 100%;
+    }
+    .stages__right{
+        margin: 60px 0 0 0;
+    }
+    .item{
+        flex-direction: column;
+        img{
+            display: none;
+        }
+    }
+    .item_left{
+        width: 100%;
     }
 }

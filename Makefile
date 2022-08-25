@@ -1,0 +1,2 @@
+default:
+	caddy run

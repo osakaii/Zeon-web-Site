@@ -35,7 +35,7 @@ function MainPageNews(props) {
           <div className={styles.titleAndLink}>
             <h3>Актуальные tech и digital новости</h3>
             <Link to="/blog" className={styles.link}>
-              See all
+            Смотреть все
             </Link>
           </div>
           <div className={styles.newsWrapper}>

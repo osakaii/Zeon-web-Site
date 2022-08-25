@@ -1,0 +1,92 @@
+
+
+.searchBar{
+    padding: 20px 0 60px 0;
+}
+.form__top{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    select{
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        appearance:none;
+    }
+}
+
+.input__label{
+    border: 1px solid #DCDCEB;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    font-size: 16px;
+    input{
+        border: none;
+    }
+    input:focus{
+        outline: none;
+    }
+}
+
+.name{
+    width: 40%;
+}
+.country{
+    width: 25%;
+    background: url('../../Assets//career/arrow.svg') 93% 50% no-repeat #fff;
+}
+.direction{
+    width: 30%;
+    background: url('../../Assets//career/arrow.svg') 93% 50% no-repeat #fff;
+}
+
+.submit{
+    width: 15%;
+    border: none;
+    background-color: #009EE3;
+    color: white;
+    border-radius: 2px;
+}
+
+.form__bottom{
+    display: flex;
+    gap: 12px;
+    user-select: none;
+    margin-top: 24px;
+}
+
+.check{
+    padding: 12px 32px;
+    background-color: #F2F4FF;
+}
+
+.filled_check{
+    padding: 12px 32px;
+    background-color: #2474BE;
+    color: white;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media (max-width: 769px) {
+    .form__top{
+        flex-direction: column;
+        button, select, label{
+            width: 100%;
+            padding: 14px 16px;
+        }
+    }
+    .form__bottom{
+        flex-direction: column;
+        label{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

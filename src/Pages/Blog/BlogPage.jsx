@@ -9,12 +9,10 @@ import { getAllNews } from "../../axios";
 
 function BlogPage(props) {
   const [news, setNews] = useState([]);
-  const imageUrl = "";
 
   const getNews = async () => {
     const fetchedData = await getAllNews();
-    setNews(fetchedData);
-    console.log(fetchedData ? fetchedData : 'have not answered');
+    setNews(fetchedData? fetchedData: []);
   };
 
   useEffect(() => {
@@ -26,10 +24,12 @@ function BlogPage(props) {
       <Header filled={true} />
       <div className="container">
         <div className={styles.blogContent}>
-          <p className={styles.titleDesc}>It's places call Blog</p>
-          <h2 className={styles.title}>Blog</h2>
+          <p className={styles.titleDesc}>Будь в курсе событий в мире digital</p>
+          <h2 className={styles.title}>Блог</h2>
           <div className={styles.newsWrapper}>
-            {news?.map((item, index) => {
+            {
+              news.length?
+            news.map((item, index) => {
               return (
                   <Link className={styles.newsItem} key={item.id + item.title} to = {`${item.id}`}>
                    <NewsBlock
@@ -40,7 +40,10 @@ function BlogPage(props) {
                   />
                   </Link>
               );
-            })}
+            })
+            :
+            <div className={styles.emptyNews}>В данный момент нет новостей</div>
+          }
           </div>
         </div>
       </div>

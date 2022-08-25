@@ -1,0 +1,11 @@
+:8080 {
+        handle_path /* {
+                root * build
+                try_files {path} /index.html
+                file_server
+        }
+        handle {
+                # Fallback for any request not otherwise handled
+        }
+}
+

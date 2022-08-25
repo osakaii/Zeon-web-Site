@@ -4,7 +4,7 @@ import { URL } from '../../constants';
 import styles from '../../styles/Career/DeveloperInfo.module.scss'
 
 function DeveloperInfo(props) {
-    const { name, short_description, office, relocation, remote, country, direction, id} = props.developerInfo
+    const { name, short_description, office, relocation, remote, country, direction, id } = props.developerInfo
 
     const [ workType, setWorkType ] = useState([])
 

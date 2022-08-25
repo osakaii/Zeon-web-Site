@@ -107,6 +107,9 @@ p{
     height: 100%;
     margin: 0 auto;
 }
+button{
+  cursor: pointer;
+}
 button:active{
   transform: scale(0.98);
 }
@@ -116,4 +119,10 @@ input::placeholder{
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #7A7FAD;
+}
+
+@media (max-width: 769px) {
+  h2{
+    font-size: 32px;
+  }
 }

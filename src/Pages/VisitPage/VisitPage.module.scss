@@ -1,0 +1,15 @@
+
+
+.testContent{
+    min-height: calc(100vh - 325px);
+    background: #EFF8FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 649px) {
+    .testContent{
+        padding: 0 15px;
+    }
+}
