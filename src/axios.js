@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API } from "./constants";
+import { API, URL } from "./constants";
 
 
 export const getAllNews = async () => {
@@ -112,7 +112,37 @@ export const register = async (body) => {
     console.log(response)
     return response;
   } catch (e) {
-    console.error("getDirectionList", e);
+    console.error("register", e);
   }
 };
 
+export const login = async (body) => {
+  try {
+    const response = await axios.post(`${API}/auth/login/`, body);
+    console.log(response)
+    return response;
+  } catch (e) {
+    console.error("login", e);
+  }
+};
+
+
+export const verifyEmail = async (body) => {
+  try {
+    const response = await axios.post(`${API}/auth/users/email/verify/`, body);
+    console.log(response)
+    return response;
+  } catch (e) {
+    console.error("verifyEmail", e);
+  }
+};
+
+export const getQuiz = async (id) => {
+  try {
+    const response = await axios.get(`${URL}/quiz/${id}/`);
+    console.log(response)
+    return response;
+  } catch (e) {
+    console.error("getQuiz", e);
+  }
+};

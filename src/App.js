@@ -10,8 +10,10 @@ import NotFound from "./Pages/NotFound/NotFound";
 import DeveloperPage from './Pages/DeveloperPage/DeveloperPage';
 import VisitPage from './Pages/VisitPage/VisitPage';
 import ScrollTop from "./Common/ScrollTop";
-import TestPage from './Pages/TestPage/TestPage';
 import SignTest from "./Pages/SignTest/SignTest";
+import TestLinks from "./Pages/TestLinks/TestLinks";
+import TestPage from "./Pages/TestPage/TestPage";
+import PrivateRoute from "./Common/PrivateRoute/PrivateRoute";
 
 function App() {
 
@@ -27,8 +29,9 @@ function App() {
         <Route path={"/Career"} element={<CareerPage/>} />
         <Route path={"/Career/:id"} element={<DeveloperPage/>} />
         <Route path={"/Visit/*"} element={<VisitPage/>} />
-        <Route path={"/test"} element={<TestPage/>} />
-        <Route path={"/sign-test/:option"} element={<SignTest/>} />
+        <Route path={"/test-links"} element={<TestLinks/>} />
+        <Route path={"/sign-test/:test"} element={<SignTest/>} />
+        <Route path={"/test/:test"} element={<PrivateRoute><TestPage/></PrivateRoute>}/>
         <Route path={"*"} element={<NotFound/>} />
       </Routes>
     </div>

@@ -1,0 +1,45 @@
+.question {
+    padding: 40px 0;
+    margin-top: 24px;
+    border-top: 1px solid #E7EFFF;
+    border-bottom: 1px solid #E7EFFF;
+    .questionIndex {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    .questionTitle {
+        line-height: 174%;
+        color: inherit;
+        margin-top: 16px;
+    }
+    .index {
+        background-color: #009ee3;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .radioBtns{
+        width: 100%;
+        gap: 12px;
+        display: flex;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .radioWrapper{
+        display: flex;
+        align-items: center;
+        width: calc(50% - 6px);
+        gap: 12px;
+        input{
+            margin: 0;
+        }
+        .questionText{
+            color: inherit;
+        }
+    }
+}

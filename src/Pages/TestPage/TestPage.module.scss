@@ -1,13 +1,23 @@
-
-.test{
-    width: 100%;
-    min-height: 100vh;
-    background: #F0FAFF;
-    .content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 44px 0 100px 0;
-        gap: 55px;
+.content{
+    min-height: calc(100vh - 200px);
+    background-color: #F0FAFF;
+    display: flex;
+    justify-content: center;
+    padding: 80px 28px;
+    .questionWrapper{
+        background-color: #ffffff;
+        padding: 72px 64px 80px;
+        color: #464d7b;
+        width: 830px;
+        .topics {
+            display: flex;
+            gap: 12px;
+            p:nth-child(1) {
+                color: #474f7a;
+            }
+            .topic {
+                color: #009ee3;
+            }
+        }
     }
 }

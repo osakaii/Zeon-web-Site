@@ -20,6 +20,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 ul[class],
 ol[class],
@@ -112,6 +113,9 @@ button{
 }
 button:active{
   transform: scale(0.98);
+}
+button:hover, a:hover{
+  opacity: 0.9;
 }
 input::placeholder{
   font-weight: 400;

@@ -30,7 +30,6 @@ function LinkToTest(props) {
             </div>
         </div>
         <div className={styles.btns}>
-            {/* <button className={styles.enter}>Пройти</button> */}
             <Link className={styles.enter} to={`/sign-test/${props.name}`}>Пройти</Link>
             <button className={styles.back}>Отмена</button>
         </div>

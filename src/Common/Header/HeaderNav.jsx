@@ -22,7 +22,7 @@ function HeaderNav({ nowPage, filled, setIsModalOpen }) {
       view: "Контакты",
     },
     {
-      value: "Test",
+      value: "Test-Links",
       view: "Тест",
     },
   ];;

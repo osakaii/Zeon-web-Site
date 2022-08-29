@@ -1,28 +1,29 @@
 import React, { useState } from "react";
 import styles from "../../styles/Test/TestEmail.module.scss";
-import { ReactComponent as Logo } from "../../Assets/blue-logo.svg";
 import { useParams } from "react-router-dom";
 import { register } from "../../axios";
+import LogoInCircle from "../../Common/LogoInCircle/LogoInCircle";
 
 function TestEmail({setIsSended}) {
     const testType = useParams().option;
-    
+
     const [emailValue, setEmailValue] = useState("");
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        const response = await register({ email: emailValue });
-       if(response.status === "200"){
+        const response = await register({ "email": emailValue });
+       if(response?.status === 200){
+            localStorage.setItem('email', emailValue)
             setIsSended(true)
+            setEmailValue("");
+            return
         }
-        setEmailValue("");
+        alert('Ошибка при отправке')
     };
 
     return (
         <div className={styles.testEmail}>
-            <div className={styles.logo_div}>
-                <Logo />
-            </div>
+            <LogoInCircle/>
             <h3>Тест на {testType} разработчика</h3>
             <p className={styles.desc}>На прохождение теста дается 60 минут.</p>
 
