@@ -1,16 +1,15 @@
 import React from "react";
 import styles from "./Question.module.scss";
 
-function TextChoice({ question, index }) {
+function TextChoice({index, questionsInfo}) {
     return (
         <div className={styles.question}>
-            <h1 className={styles.title}></h1>
-            <div className={styles.topics}></div>
-            <p></p>
-            <h2>
-                <span>{index}</span>
-            </h2>
-            <input type="text" />
+            <div className={styles.questionIndex}>
+                <div className={styles.index}>{index}</div> 
+                <h5>Как решить эту проблему</h5> 
+            </div>
+            <p className={styles.questionTitle}>{questionsInfo.title}</p>
+            <input type="text" placeholder="Ваш ответ"/>
         </div>
     );
 }

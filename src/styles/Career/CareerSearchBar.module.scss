@@ -2,6 +2,9 @@
 
 .searchBar{
     padding: 20px 0 60px 0;
+    input[type="checkbox"] {
+        display: none;
+    }    
 }
 .form__top{
     display: flex;
@@ -70,9 +73,6 @@
     color: white;
 }
 
-input[type="checkbox"] {
-    display: none;
-}
 
 @media (max-width: 769px) {
     .form__top{
