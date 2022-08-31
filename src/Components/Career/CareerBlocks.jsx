@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/Career/CareerBlocks.module.scss'
+import styles from 'src/styles/Career/CareerBlocks.module.scss'
 
 
 function CareerBlocks({svg, title, desc}) {

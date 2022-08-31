@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getDeveloperById } from "../../axios";
+import { getDeveloperById } from "../../business/axios";
 import parse from 'html-react-parser';
 import styles from "./DeveloperPage.module.scss";
 import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
 import ResponseModal from "../../Components/Modals/ResponseModal";
-import { URL } from "../../constants";
+import { URL } from "../../data/constants";
 
 function DeveloperPage(props) {
   const developerId = useParams().id;

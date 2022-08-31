@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API, URL } from "./constants";
+import { API, URL } from "../data/constants";
 
 
 export const getAllNews = async () => {
@@ -146,3 +146,15 @@ export const getQuiz = async (id) => {
     console.error("getQuiz", e);
   }
 };
+
+export const getAllQuiz = async () => {
+  try {
+    const response = await axios.get(`${URL}/quiz/`);
+    console.log(response)
+    return response;
+  } catch (e) {
+    console.error("getQuiz", e);
+  }
+};
+
+

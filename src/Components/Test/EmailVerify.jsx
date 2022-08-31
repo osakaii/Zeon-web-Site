@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "src/styles/Test/EmailVerify.module.scss";
-import { login, verifyEmail } from "src/axios";
+import { login, verifyEmail } from "src/business/axios";
 import ErrorMessage from "src/Common/Error";
 import LogoInCircle from "src/Common/LogoInCircle/LogoInCircle";
 import { useParams } from "react-router-dom";
@@ -29,6 +29,7 @@ function EmailVerify() {
                 "password": email,
             })
             localStorage.setItem('token', "Token " + response.data.token)
+            
         } else {
             setShowError(true);
         }

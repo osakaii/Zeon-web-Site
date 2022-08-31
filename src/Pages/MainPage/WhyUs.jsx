@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/MainPage/WhyUs.module.scss";
-import { COUNTRIES } from "../../static";
+import { COUNTRIES } from "../../data/static";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";

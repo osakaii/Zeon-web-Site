@@ -3,7 +3,7 @@ import styles from "./CareerPage.module.scss"
 import Header from '../../Common/Header/Header';
 import Footer from '../../Common/Footer/Footer';
 import CareerIntro from '../../Components/Career/CareerIntro';
-import { getDevelopers } from '../../axios';
+import { getDevelopers } from '../../business/axios';
 import CareerSearchBar from '../../Components/Career/CareerSearchBar';
 import DeveloperInfo from '../../Components/Career/DeveloperInfo';
 import CareerWhyUs from '../../Components/Career/CareerWhyUs';

@@ -4,7 +4,7 @@ import { ReactComponent as CloseModal } from "../../Assets/closeModal.svg";
 import { ReactComponent as Files } from "../../Assets/career/files.svg";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import { sendCareerResponse } from "../../axios";
+import { sendCareerResponse } from "../../business/axios";
 
 function ResponseModal({ setShowModal, careerId }) {
   const [cvFile, setCvFile] = useState();

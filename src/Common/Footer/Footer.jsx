@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import { ReactComponent as Logo } from "../../Assets/footer-logo.svg";
-import { STATIC_DATA } from "../../static";
+import { STATIC_DATA } from "../../data/static";
 
 function Footer(props) {
   const goLink = (to) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { URL } from '../../constants';
+import { URL } from '../../data/constants';
 import styles from '../../styles/Career/DeveloperInfo.module.scss'
 
 function DeveloperInfo(props) {

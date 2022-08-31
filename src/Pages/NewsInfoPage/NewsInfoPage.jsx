@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import styles from "./NewsInfoPage.module.scss";
 import Header from "../../Common/Header/Header";
 import Footer from "../../Common/Footer/Footer";
-import { getNewNews, getNewsById } from "../../axios";
+import { getNewNews, getNewsById } from "../../business/axios";
 import { Link, useParams } from "react-router-dom";
-import { URL } from "../../constants";
+import { URL } from "../../data/constants";
 import NewsBlock from "../../Components/NewsBlock";
 
 function NewsInfoPage(props) {

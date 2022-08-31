@@ -8,7 +8,7 @@ import {
   getCountryList,
   getDirectionList,
   getFilteredCareer,
-} from "../../axios";
+} from "../../business/axios";
 
 function CareerSearchBar({ setDeveloperList }) {
   const [countryList, setCountryList] = useState([]);

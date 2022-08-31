@@ -1,35 +1,35 @@
-import { ReactComponent as UK } from "./Assets/countires/svg/UK.svg";
-import { ReactComponent as GrayUK } from "./Assets/countires/svg/grayUk.svg";
+import { ReactComponent as UK } from "src/Assets/countires/svg/UK.svg";
+import { ReactComponent as GrayUK } from "src/Assets/countires/svg/grayUk.svg";
 
-import { ReactComponent as Canada } from "./Assets/countires/svg/Canada.svg";
-import { ReactComponent as GrayCanada } from "./Assets/countires/svg/grayCanada.svg";
+import { ReactComponent as Canada } from "src/Assets/countires/svg/Canada.svg";
+import { ReactComponent as GrayCanada } from "src/Assets/countires/svg/grayCanada.svg";
 
-import { ReactComponent as Poland } from "./Assets/countires/svg/Poland.svg";
-import { ReactComponent as GrayPoland } from "./Assets/countires/svg/grayPoland.svg";
+import { ReactComponent as Poland } from "src/Assets/countires/svg/Poland.svg";
+import { ReactComponent as GrayPoland } from "src/Assets/countires/svg/grayPoland.svg";
 
-import { ReactComponent as ItalyColor } from "./Assets/countires/svg/image2vector.svg";
-import { ReactComponent as GrayItaly } from "./Assets/countires/svg/grayItaly.svg";
+import { ReactComponent as ItalyColor } from "src/Assets/countires/svg/image2vector.svg";
+import { ReactComponent as GrayItaly } from "src/Assets/countires/svg/grayItaly.svg";
 
-import { ReactComponent as FinlandColor } from "./Assets/countires/svg/finland.svg";
-import { ReactComponent as GrayFinland } from "./Assets/countires/svg/grayFinland.svg";
+import { ReactComponent as FinlandColor } from "src/Assets/countires/svg/finland.svg";
+import { ReactComponent as GrayFinland } from "src/Assets/countires/svg/grayFinland.svg";
 
-import { ReactComponent as Us } from "./Assets/countires/svg/US.svg";
-import { ReactComponent as GrayUs } from "./Assets/countires/svg/grayUs.svg";
+import { ReactComponent as Us } from "src/Assets/countires/svg/US.svg";
+import { ReactComponent as GrayUs } from "src/Assets/countires/svg/grayUs.svg";
 
-import { ReactComponent as Ukraine } from "./Assets/countires/svg/Ukraine.svg";
-import { ReactComponent as GrayUkraine } from "./Assets/countires/svg/grayUkraine.svg";
+import { ReactComponent as Ukraine } from "src/Assets/countires/svg/Ukraine.svg";
+import { ReactComponent as GrayUkraine } from "src/Assets/countires/svg/grayUkraine.svg";
 
-import { ReactComponent as CzechColor } from "./Assets/countires/svg/czech-republic (color).svg";
-import { ReactComponent as GrayCzech } from "./Assets/countires/svg/grayCzech.svg";
+import { ReactComponent as CzechColor } from "src/Assets/countires/svg/czech-republic (color).svg";
+import { ReactComponent as GrayCzech } from "src/Assets/countires/svg/grayCzech.svg";
 
-import { ReactComponent as NetherlandsColor } from "./Assets/countires/svg/netherlands.svg";
-import { ReactComponent as GrayNether } from "./Assets/countires/svg/grayNether.svg";
+import { ReactComponent as NetherlandsColor } from "src/Assets/countires/svg/netherlands.svg";
+import { ReactComponent as GrayNether } from "src/Assets/countires/svg/grayNether.svg";
 
-import { ReactComponent as NorwayColor } from "./Assets/countires/svg/Norway.svg";
-import { ReactComponent as GrayNorway } from "./Assets/countires/svg/grayNorway.svg";
+import { ReactComponent as NorwayColor } from "src/Assets/countires/svg/Norway.svg";
+import { ReactComponent as GrayNorway } from "src/Assets/countires/svg/grayNorway.svg";
 
-import { ReactComponent as SwedenColor } from "./Assets/countires/svg/Sweden.svg";
-import { ReactComponent as GraySweden } from "./Assets/countires/svg/graySweden.svg";
+import { ReactComponent as SwedenColor } from "src/Assets/countires/svg/Sweden.svg";
+import { ReactComponent as GraySweden } from "src/Assets/countires/svg/graySweden.svg";
 
 export const STATIC_DATA = {
     employees : [

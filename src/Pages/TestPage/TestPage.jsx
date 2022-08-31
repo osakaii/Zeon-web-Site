@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getQuiz } from "src/axios";
+import { getQuiz } from "src/business/axios";
 import Footer from "src/Common/Footer/Footer";
 import Header from "src/Common/Header/Header";
 import MultiChoice from "src/Components/questions/MultiChoice";

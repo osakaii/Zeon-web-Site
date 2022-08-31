@@ -5,7 +5,7 @@ import Footer from "../../Common/Footer/Footer";
 import { useState, useEffect } from "react";
 import NewsBlock from "../../Components/NewsBlock";
 import { Link } from "react-router-dom";
-import { getAllNews } from "../../axios";
+import { getAllNews } from "../../business/axios";
 
 function BlogPage(props) {
   const [news, setNews] = useState([]);

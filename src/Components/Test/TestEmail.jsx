@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/Test/TestEmail.module.scss";
 import { useParams } from "react-router-dom";
-import { register } from "../../axios";
+import { register } from "../../business/axios";
 import LogoInCircle from "../../Common/LogoInCircle/LogoInCircle";
 
 function TestEmail({setIsSended}) {

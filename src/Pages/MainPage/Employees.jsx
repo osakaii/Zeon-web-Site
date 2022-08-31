@@ -1,7 +1,7 @@
 import styles from "./MainPage.module.scss";
 import React from "react";
 import employeeImg from "../../Assets/OurEmp.png";
-import { STATIC_DATA } from "../../static";
+import { STATIC_DATA } from "../../data/static";
 
 function Employees(props) {
   return (

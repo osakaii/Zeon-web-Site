@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Modal.module.scss";
 import { ReactComponent as CloseModal } from '../../Assets/closeModal.svg'
 import * as Yup from "yup";
-import { sendFeedback } from "../../axios";
+import { sendFeedback } from "../../business/axios";
 
 function ContactUs(props) {
 

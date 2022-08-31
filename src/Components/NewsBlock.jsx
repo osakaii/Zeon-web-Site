@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./NewsBlock.module.scss";
 import { Link } from "react-router-dom";
-import { API, URL } from '../constants';
+import { API, URL } from '../data/constants';
 
 function NewsBlock(props) {
   const { image, title, date, desc } = props;
