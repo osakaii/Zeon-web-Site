@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "src/styles/Test/EmailVerify.module.scss";
-import { login, verifyEmail } from "src/business/axios";
+import { login, startQuiz, verifyEmail } from "src/business/axios";
 import ErrorMessage from "src/Common/Error";
 import LogoInCircle from "src/Common/LogoInCircle/LogoInCircle";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function EmailVerify() {
 
     const {test} = useParams()
+    const navigate = useNavigate()
 
     const [inputValue, setInputValue] = useState("");
     const [showError, setShowError] = useState(false);
@@ -24,11 +25,21 @@ function EmailVerify() {
 
         if (responseMessage === "email verified") {
             const email = localStorage.getItem('email')
-            const response = await login({
+            const responseLogin = await login({
                 "username": email,
                 "password": email,
             })
-            localStorage.setItem('token', "Token " + response.data.token)
+            localStorage.setItem('token', "Token " + responseLogin.data.token)
+
+            const responseStart = await startQuiz({
+                "quiz": test
+            })
+
+            localStorage.setItem('quizId', response.data.id)
+
+            if(responseStart.status === 200){
+                navigate(`/test/${test}`)
+            }
             
         } else {
             setShowError(true);

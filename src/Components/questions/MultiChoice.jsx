@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Question.module.scss";
 
 function MultiChoice({index, questionsInfo}) {
-    console.log(questionsInfo)
+    
     return (
         <div className={styles.question}>
             <div className={styles.questionIndex}>

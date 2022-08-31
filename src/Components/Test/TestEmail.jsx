@@ -36,7 +36,7 @@ function TestEmail({setIsSended}) {
                     required
                     onChange={(e) => setEmailValue(e.target.value)}
                 />
-                <button className={styles.sendBtn}>Получить ссылку</button>
+                <button className={styles.sendBtn}>Получить код</button>
             </form>
         </div>
     );

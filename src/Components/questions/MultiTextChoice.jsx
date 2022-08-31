@@ -3,7 +3,6 @@ import styles from "./Question.module.scss";
 
 
 function MultiTextChoice({index, questionsInfo}) {
-    console.log(questionsInfo)
     return (
         <div className={styles.question}>
             <div className={styles.questionIndex}>

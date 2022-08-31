@@ -16,19 +16,30 @@ function TestPage() {
     const [questions, setQuestions] = useState();
     const [questionType, setQuestionType] = useState();
     const [questionIndex, setQuestionIndex] = useState(0);
+    const [userAnswer, setUserAnswer] = useState({
+            "response": localStorage.getItem('quizId'),
+            "question": questionIndex,
+            "text": "",
+            "options": []
+    })
 
     const fetchData = async () => {
-        console.log(test);
         const response = await getQuiz(test);
         if (response.status === 200) {
             setQuestions(response.data);
-            setQuestionIndex(2);
+            setQuestionIndex(0)
         }
     };
 
+    const handleAnswer = () => {
+        console.log(userAnswer)
+        setUserAnswer(prev => ({...prev, text: "", options: []}))
+    }
+
     useEffect(() => {
         setQuestionType(questions?.questions[questionIndex].type);
-    }, [questionIndex]);
+        setUserAnswer(prev => ({...prev, "question": questionIndex}))
+    }, [questionIndex, questions]);
 
     useEffect(() => {
         fetchData();
@@ -48,17 +59,17 @@ function TestPage() {
                             </p>
                         ))}
                     </div>
-                    <p></p>
+                    <p className={styles.desc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel elit elit  velit condimentum velit, eget vulputate sapien. Mauris </p>
                     {questionType === "single_choice" ? (
                         <OneChoice index={questionIndex + 1} questionsInfo={questions.questions[questionIndex]} />
                     ) : questionType === "multiple" ? (
                         <MultiChoice index={questionIndex + 1} questionsInfo={questions.questions[questionIndex]} />
                     ) : questionType === "text" ? (
-                        <TextChoice index={questionIndex + 1} questionsInfo={questions.questions[questionIndex]} />
+                        <TextChoice index={questionIndex + 1} questionsInfo={questions.questions[questionIndex]} setUserAnswer={setUserAnswer} inputValue = {userAnswer.text}/>
                     ) : questionType === "multiple_with_own" ? (
                         <MultiTextChoice index={questionIndex + 1} questionsInfo={questions.questions[questionIndex]} />
                     ) : null}
-                    <Pagination setQuestionIndex={setQuestionIndex} maxPage={questions?.questions.length - 1} current={questionIndex} />
+                    <Pagination setQuestionIndex={setQuestionIndex} maxPage={questions?.questions.length - 1} current={questionIndex} handleAnswer = {handleAnswer}/>
                 </div>
             </div>
             <Footer />
