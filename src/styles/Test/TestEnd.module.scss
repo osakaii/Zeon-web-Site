@@ -1,0 +1,32 @@
+.end {
+    background-color: #f0faff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+        background-color: #ffffff;
+        max-width: 734px;
+        padding: 72px 64px 80px;
+        margin: 44px 0 124px;
+        h2 {
+            margin: 40px 0 20px;
+            color: #222539;
+            font-size: 24px;
+            line-height: 145%;
+            width: 50%;
+        }
+        p{
+            width: 50%;
+        }
+        button {
+            width: 198px;
+            height: 44px;
+            background: #009ee3;
+            border-radius: 2px;
+            border: none;
+            color: white;
+            margin-top: 40px;
+        }
+    }
+}

@@ -160,7 +160,7 @@ export const getAllQuiz = async () => {
 
 export const startQuiz = async (body) => {
   try {
-    const response = await axios.get(`${URL}/response/`, body, {
+    const response = await axios.post(`${URL}response/`, body, {
       headers: {
         "Authorization": localStorage.getItem('token')
       }
@@ -168,6 +168,17 @@ export const startQuiz = async (body) => {
     console.log(response)
     return response;
   } catch (e) {
-    console.error("getQuiz", e);
+    console.error("startQuiz", e);
   }
 };
+
+export const answer = async (body) => {
+  try {
+    const response = await axios.post(`${URL}answer/`, body);
+    console.log(response)
+    return response;
+  } catch (e) {
+    console.error("answer", e);
+  }
+};
+

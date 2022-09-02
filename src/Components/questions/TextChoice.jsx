@@ -2,12 +2,14 @@ import React from "react";
 import styles from "./Question.module.scss";
 
 function TextChoice({ index, questionsInfo, setUserAnswer, inputValue }) {
-    const handleInputChange = (e) => {
+    const handleInputChange = (e, id) => {
         setUserAnswer((prev) => ({
             ...prev,
+            question: id,
             text: e.target.value,
         }));
     };
+
 
     return (
         <div className={styles.question}>
@@ -16,7 +18,7 @@ function TextChoice({ index, questionsInfo, setUserAnswer, inputValue }) {
                 <h5>Как решить эту проблему</h5>
             </div>
             <p className={styles.questionTitle}>{questionsInfo.title}</p>
-            <input type="text" placeholder="Ваш ответ" onChange={handleInputChange} value={inputValue} />
+            <input type="text" placeholder="Ваш ответ" className={styles.textInp} onChange={(e) => handleInputChange(e, questionsInfo.id)} value={inputValue} />
         </div>
     );
 }

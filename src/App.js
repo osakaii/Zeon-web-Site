@@ -14,6 +14,7 @@ import SignTest from "./Pages/SignTest/SignTest";
 import TestLinks from "./Pages/TestLinks/TestLinks";
 import TestPage from "./Pages/TestPage/TestPage";
 import PrivateRoute from "./Common/PrivateRoute/PrivateRoute";
+import TestEnd from "./Components/Test/TestEnd";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path={"/Visit/*"} element={<VisitPage/>} />
         <Route path={"/test-links"} element={<TestLinks/>} />
         <Route path={"/sign-test/:test"} element={<SignTest/>} />
+        <Route path={"/TestEnd"} element={<TestEnd/>} />
         <Route path={"/test/:test"} element={<PrivateRoute><TestPage/></PrivateRoute>}/>
         <Route path={"*"} element={<NotFound/>} />
       </Routes>

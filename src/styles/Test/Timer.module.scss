@@ -1,0 +1,15 @@
+
+.timerWrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #009EE3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .timer{
+        color: white;
+    }
+}

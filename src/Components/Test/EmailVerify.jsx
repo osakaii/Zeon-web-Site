@@ -21,14 +21,15 @@ function EmailVerify() {
             otp: inputValue,
         });
 
-        const responseMessage = await response.data.message;
-
-        if (responseMessage === "email verified") {
+        // const responseMessage = await response.data.message;
+        console.log(response)
+        if (response.data.massage === "email verified") {
             const email = localStorage.getItem('email')
             const responseLogin = await login({
                 "username": email,
                 "password": email,
             })
+
             localStorage.setItem('token', "Token " + responseLogin.data.token)
 
             const responseStart = await startQuiz({
@@ -37,7 +38,7 @@ function EmailVerify() {
 
             localStorage.setItem('quizId', response.data.id)
 
-            if(responseStart.status === 200){
+            if(responseStart.status === 201){
                 navigate(`/test/${test}`)
             }
             
