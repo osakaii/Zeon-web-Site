@@ -21,8 +21,6 @@ function EmailVerify() {
             otp: inputValue,
         });
 
-        // const responseMessage = await response.data.message;
-        console.log(response)
         if (response.data.massage === "email verified") {
             const email = localStorage.getItem('email')
             const responseLogin = await login({
@@ -36,7 +34,7 @@ function EmailVerify() {
                 "quiz": test
             })
 
-            localStorage.setItem('quizId', response.data.id)
+            localStorage.setItem('quizId', responseStart.data.id)
 
             if(responseStart.status === 201){
                 navigate(`/test/${test}`)

@@ -13,7 +13,6 @@ function Timer(props) {
         resume,
         restart,
       } = useTimer({ expiryTimestamp, onExpire: () => {
-        setTimerValue(null)
         handleAnswer() 
     }});
     

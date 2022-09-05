@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PrivateRoute({ children }) {
+
+    const navigate = useNavigate()
     
     const [isAuth, setIsAuth] = useState(false)
 
@@ -13,7 +16,7 @@ function PrivateRoute({ children }) {
     if(isAuth){
         return children;
     }else{
-        return null
+        navigate("/test-links")
     }
 }
 

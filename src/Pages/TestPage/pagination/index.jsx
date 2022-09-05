@@ -1,8 +1,14 @@
 import React from 'react'
 import styles from "./styles.module.scss"
 
-function Pagination({ current ,setQuestionIndex, maxPage, handleAnswer}) {
+function Pagination({ current ,setQuestionIndex, maxPage, handleAnswer, noQuestions}) {
 
+
+  if(noQuestions){
+    return(
+      <></>
+    )
+  }
   return (
     <div className={styles.pagination}>
         <button onClick={() => setQuestionIndex(prev => prev === 0 ? 0 : prev -= 1)} className={styles.prev}>Назад</button>

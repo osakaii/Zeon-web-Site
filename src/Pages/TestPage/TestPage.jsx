@@ -19,6 +19,7 @@ function TestPage() {
     const [questionType, setQuestionType] = useState();
     const [questionIndex, setQuestionIndex] = useState(0);
     const [timerValue, setTimerValue] = useState()
+    const [noQuestions, setNoQuestions] = useState()
     
 
     const [userAnswer, setUserAnswer] = useState({
@@ -33,9 +34,14 @@ function TestPage() {
         if (response.status === 200) {
             setQuestions(response.data);
 
+            if(response.data.questions.length === 0){
+                setNoQuestions(true)
+                return
+            }
+
             setQuestionIndex(0);
 
-            const times = (response.data.questions[questionIndex].time)?.split(':')
+            const times = (response.data.questions[questionIndex].time).split(':')
 
             const time = new Date()
             time.setMinutes(time.getMinutes() + Number(times[1]))
@@ -51,28 +57,31 @@ function TestPage() {
         
         const response = answer(userAnswer);
         setUserAnswer((prev) => ({ ...prev, text: "", options: [] }));
-
+        
+        if (response.status === 201 && (questionIndex + 1) === questions.questions.length) {
+            return navigate("/TestEnd");
+        }
         const time = new Date()
         const times = (questions.questions[questionIndex + 1].time)?.split(':')
         time.setMinutes(time.getMinutes() + Number(times[1]))
 
+        setTimerValue(null)
         setTimeout(() => {
             setTimerValue(time)
         }, 1000)
 
-        if (response.status === 201 && (questionIndex + 1) === questions.questions.length) {
-            navigate("/TestEnd");
-        }
     };
-
-    useEffect(() => {
-        setQuestionType(questions?.questions[questionIndex].type);
-        setUserAnswer((prev) => ({ ...prev, question: questionIndex + 1}));
-    }, [questionIndex, questions]);
 
     useEffect(() => {
         fetchData();
     }, []);
+
+    useEffect(() => {
+        setQuestionType(questions?.questions[questionIndex]?.type);
+        setUserAnswer((prev) => ({ ...prev, question: questionIndex + 1}));
+    }, [questionIndex, questions]);
+
+  
 
     return (
         <>
@@ -93,7 +102,11 @@ function TestPage() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel elit elit velit condimentum velit, eget vulputate
                         sapien. Mauris{" "}
                     </p>
-                    {questionType === "single_choice" ? (
+                    { 
+                    noQuestions?
+                        <p className={styles.noQuest}>No questions</p>
+                    :
+                    questionType === "single_choice" ? (
                         <OneChoice index={questionIndex + 1} questionsInfo={questions.questions[questionIndex]} setUserAnswer={setUserAnswer} />
                     ) : questionType === "multiple" ? (
                         <MultiChoice
@@ -122,6 +135,7 @@ function TestPage() {
                         maxPage={questions?.questions.length - 1}
                         current={questionIndex}
                         handleAnswer={handleAnswer}
+                        noQuestions = {noQuestions}
                     />
                 </div>
             </div>

@@ -39,7 +39,7 @@ function Header({ filled, location }) {
             />
           </Link>
           {burger && (
-            <div className={styles.burgerBtn} onClick={() => toggleOpen()}>
+            <div className={openMobNav ? styles.burgerBtn + " " + styles.open : styles.burgerBtn} onClick={() => toggleOpen()}>
               <span></span>
               <span></span>
               <span></span>
