@@ -3,8 +3,6 @@ import styles from "./Question.module.scss";
 
 function MultiTextChoice({ index, questionsInfo, setUserAnswer, userAnswers }) {
     const handleCheckboxChange = (e, questId, id) => {
-        console.log(e.target.checked, id);
-
         let tempArray = userAnswers;
 
         if (tempArray.indexOf(id) === -1) {
@@ -36,7 +34,7 @@ function MultiTextChoice({ index, questionsInfo, setUserAnswer, userAnswers }) {
             </div>
             <p className={styles.questionTitle}>{questionsInfo.title}</p>
             <div className={styles.radioBtns}>
-                {questionsInfo.options.map((el, index) => (
+                {questionsInfo.options.map((el) => (
                     <div className={styles.radioWrapper} key={el.id}>
                         <input type="checkbox" name="radioBtn" onChange={(e) => handleCheckboxChange(e, questionsInfo.id, el.id)} />
                         <p className={styles.questionText}>{el.text}</p>

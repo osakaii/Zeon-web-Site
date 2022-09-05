@@ -18,7 +18,8 @@ function TestPage() {
     const [questions, setQuestions] = useState();
     const [questionType, setQuestionType] = useState();
     const [questionIndex, setQuestionIndex] = useState(0);
-    const [timerValue, setTimerValue] = useState({})
+    const [timerValue, setTimerValue] = useState()
+    
 
     const [userAnswer, setUserAnswer] = useState({
         response: Number(localStorage.getItem("quizId")),
@@ -36,28 +37,30 @@ function TestPage() {
 
             const times = (response.data.questions[questionIndex].time)?.split(':')
 
-            setTimerValue({
-                initialMinute: Number(times[1]),
-                initialSeconds: Number(times[2])
-            })
+            const time = new Date()
+            time.setMinutes(time.getMinutes() + Number(times[1]))
+
+            setTimerValue(time)
         }
     };
+
 
     const handleAnswer = () => {
         const maxPage = questions?.questions.length - 1
         setQuestionIndex(prev => prev === maxPage ? maxPage : prev += 1)
         
-        const times = (questions.questions[questionIndex + 1].time)?.split(':')
-
-        setTimerValue({
-            initialMinute: Number(times[1]),
-            initialSeconds: Number(times[2])
-        })
-
         const response = answer(userAnswer);
         setUserAnswer((prev) => ({ ...prev, text: "", options: [] }));
 
-        if (response.status === 201 && questionIndex === questions?.questions.length) {
+        const time = new Date()
+        const times = (questions.questions[questionIndex + 1].time)?.split(':')
+        time.setMinutes(time.getMinutes() + Number(times[1]))
+
+        setTimeout(() => {
+            setTimerValue(time)
+        }, 1000)
+
+        if (response.status === 201 && (questionIndex + 1) === questions.questions.length) {
             navigate("/TestEnd");
         }
     };
@@ -75,7 +78,7 @@ function TestPage() {
         <>
             <Header filled={true} />
             <div className={styles.content}>
-                <Timer initialMinute = {timerValue.initialMinute} initialSeconds = {timerValue.initialSeconds} handleAnswer = {handleAnswer}/>
+                { timerValue && <Timer expiryTimestamp = {timerValue} handleAnswer = {handleAnswer} setTimerValue ={setTimerValue}/>}
                 <div className={styles.questionWrapper}>
                     <h2 className={styles.title}>{questions?.title}</h2>
                     <div className={styles.topics}>

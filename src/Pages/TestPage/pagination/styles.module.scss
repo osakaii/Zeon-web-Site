@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 48px;
+    flex-wrap: wrap;
     button{
         border: none;
         padding: 12px 0;
@@ -24,5 +25,15 @@
     .current{
         color: #222539;
         font-weight: 500;
+    }
+}
+@media (max-width: 754px) {
+    .pagination{
+        button{
+            width: 100%;
+        }
+        .pages{
+            margin: 14px auto;
+        }
     }
 }
